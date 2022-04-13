@@ -1,0 +1,22 @@
+class CompteBancaire(object):
+    def deposer (self,montant):
+        self.solde = self.solde + montant
+        print (self.solde)
+    def retrait (self,montant):
+        self.solde = self.solde - montant
+        print (self.solde)
+    def afficher_info (self):
+        print ('nom:',self.nomTitulaire,'et solde:',self.solde)
+    
+    def __init__(self,nomTitulaire,solde):
+        self.nomTitulaire = nomTitulaire
+        self.solde = solde
+
+
+compte1 = CompteBancaire('Ali',10000)
+compte1.deposer(2500)
+compte1.retrait(3000)
+compte1.retrait(7000)
+compte1.deposer(1500)
+
+compte1.afficher_info()
